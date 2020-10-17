@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect, make_response, render_template
-from flask_bootstrap import bootstrap
+from flask_bootstrap import Bootstrap
 
 
 app = Flask(__name__)

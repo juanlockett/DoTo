@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>
-            {% block title %}Todo List |{% endblock %}
-        </title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    </head>
-    <body>
-        <header>
-            {% include 'navbar.html' %}
-        </header>
-        {% block content %}
-        {% endblock %}
-    </body>
-</html>
+{% extends 'bootstrap/base.html' %}
+
+{% block head %}
+    {{ super() }}
+    <title>
+        {% block title %}Todo List |{% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}    
+
+{% block body %}
+    {% block navbar %}
+        {% include 'navbar.html' %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+{% endblock %}
