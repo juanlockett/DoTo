@@ -1,9 +1,11 @@
-from flask import Flask, request, redirect, make_response, render_template
+from flask import Flask, request, redirect, make_response, render_template, session
 from flask_bootstrap import Bootstrap
 
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
+
+app.config['SECRET_KEY'] = 'SETEAR UNA CLAVE SECRETA'#cambiar esta llave por una llave generada programaticamente
 
 
 todos = ['Comprar café', 'enviar video al productor', 'terminar dashboard rrss']
@@ -20,13 +22,13 @@ def internal_server_error(error):
 def index():
     user_ip = request.remote_addr
     response = make_response(redirect('/hello'))
-    response.set_cookie('user_ip', user_ip)
+    session['user_ip'] = user_ip
 
     return response
 
 @app.route('/hello')
 def hello():
-    user_ip = request.cookies.get('user_ip')
+    user_ip = session.get('user_ip')
     context = {
         'user_ip': user_ip,
         'todos': todos,
