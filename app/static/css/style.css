@@ -1,12 +1,120 @@
-html * {
+* {
+    /*border:solid 1px red;*/
     font-family: sans-serif;
 }
-
+html {
+    min-height: 100%;
+    position: relative;
+}
 img {
     max-width: 30px;
 }
 
-.form{
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, rgb(31, 31, 31), rgb(13, 84, 117));
+    color: rgb(0, 183, 255);
+    margin-bottom: 40px;
+}
+
+.h1, .h2, h1, h2{
+    padding: 15px;
+    padding-bottom: 5px;
+}
+
+.h7, h7 {
+    margin: 15px;
+}
+
+ .form{
     width: 50%;
     margin: auto;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.form-control{
+    color: rgb(0, 183, 255);
+    background-color: rgb(98, 98, 98);
+    border-color: rgba(0, 153, 255, 0.705);
+}
+
+.navbar-inverse {
+    background-color: #0E5C7C;
+    border-color: #0E5C7C;
+    border-bottom: solid rgb(18, 118, 158) 2px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: rgba(0, 183, 255, 0.657)
+}
+
+.seccion {
+    width: 80%;
+    border-color: rgb(63, 62, 62);
+    background-color: rgb(60,60,60);
+    border-radius: 10px;
+    border: 0px solid grey;
+    margin-top: 20px;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.article {
+    background-color: rgb(78, 76, 76);
+    border-color: rgb(65, 61, 61);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.btn-default{
+    background-color: rgba(0, 183, 255, 0.657);
+    border-color: rgba(0, 153, 255, 0.705);
+}
+
+
+.list-group{
+    /*width: 100%;*/
+    margin: 5px;
+    background-color: inherit;
+}
+
+.list-group-item{
+    display: flex;
+    background-color: inherit;
+    border: 0;
+}
+
+.list-group-item > .badge{
+    width: 110px;
+    height: 20px;
+    float:inline-start;
+}
+
+.item-description{
+    margin-left: 10px;
+    width: 80%;
+    height: auto;
+}
+
+.list-group .form {
+    width: 10%;
+    margin: auto;
+}
+
+.list-group .btn-default{
+    width: 80%;
+    background-color: rgba(0, 183, 255, 0.657);
+    border-color: rgba(0, 153, 255, 0.705);
+    padding: 1px;
+    margin: 3px;
+}
+footer
+{
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
 }

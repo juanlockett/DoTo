@@ -4,7 +4,7 @@
 
 {% block title %}
     {{ super() }}
-    Bienbenido
+    List
 {% endblock %}
 
 {% block content %}
@@ -12,22 +12,27 @@
     <h1> Bienvenido, {{ username | capitalize }}</h1>
 {% endif %}
     {% if user_ip %}
-        <h3>
-            Hello World Flask, tu IP es {{ user_ip }}
-        </h3>
+        <h7>
+            Puedes creear items a continuación, cambiarles el estado y borrarlas.
+        </h7>
     {% else %}
         <a href="{{ url_for('index') }}">Ir a inicio</a>
     {% endif %}
 
-    <div class="container">
-        <h2>Crear una nueva tarea</h2>
+    <div class="seccion">
+        <div class="article">
+            <h2>Crear un nuevo item</h2>
+            {{ wtf.quick_form(todo_form) }}
+        </div>
+    
 
-        {{ wtf.quick_form(todo_form) }}
+        <div class="article">
+            <h2>Lista de item</h2>
+            <ul class="list-group">
+                {% for todo in todos %}
+                    {{ macros.render_todo(todo, delete_form, update_form) }}
+                {% endfor %}
+            </ul>
+        </div>
     </div>
-
-    <ul class="list-group">
-        {% for todo in todos %}
-            {{ macros.render_todo(todo, delete_form, update_form) }}
-        {% endfor %}
-    </ul>
 {% endblock %}

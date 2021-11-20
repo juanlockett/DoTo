@@ -2,13 +2,9 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-#project_id = 'testflask-266417'
+
 credential = credentials.ApplicationDefault()
 firebase_admin.initialize_app(credential)
-
-# , {
-#     'projectID': project_id,
-# }
 
 db = firestore.client()
 

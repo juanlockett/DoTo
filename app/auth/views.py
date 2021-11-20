@@ -22,9 +22,7 @@ def login():
         user_doc = get_user(username)
 
         if user_doc.to_dict() is not None:
-            #password_from_db = user_doc.to_dict()['password']
             if check_password_hash(user_doc.to_dict()['password'], password):
-            #if password == password_from_db:
                 user_data = UserData(username, password)
                 user = UserModel(user_data)
 
