@@ -7,7 +7,7 @@ https://do-to-producction.rj.r.appspot.com/
 El proycto cuenta con un modulo de autenticación y alta de usuarios, sumado al modulo que le da la funcionalidad de lista.
 
 Para deploy en producción:
-Configurar Google SDK. COnsultar documentación:
+Configurar Google SDK. Consultar documentación:
 https://cloud.google.com/sdk/docs/quickstart
 Tambien va a poder encontrar en la documentación los pasos para configurar la cuenta.
 
