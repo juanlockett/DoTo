@@ -1,8 +1,6 @@
 # DoTo
 Proyecto de lista de items, creado en flask con firestore service.
 
-Ruta de producción del proyecto:
-https://do-to-producction.rj.r.appspot.com/
 
 El proycto cuenta con un modulo de autenticación y alta de usuarios, sumado al modulo que le da la funcionalidad de lista.
 
